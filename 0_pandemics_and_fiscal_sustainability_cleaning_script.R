@@ -18,7 +18,11 @@ caricom_and_regions <- c("ATG","BHS","BLZ","BRB","DMA","GRD","GUY","HTI","JAM","
 
 # Import WDI Data
 library(wbstats)
-series <- c("GC.DOD.TOTL.GD.ZS",
+series <- c("NY.GDP.MKTP.KD",
+            "NY.GDP.PCAP.KD",
+            "NY.GDP.MKTP.KD.ZG",
+            "NY.GDP.PCAP.KD.ZG",
+            "GC.DOD.TOTL.GD.ZS",
             "ST.INT.ARVL",
             "GC.REV.XGRT.GD.ZS",
             "GC.TAX.TOTL.GD.ZS",
