@@ -18,17 +18,23 @@ caricom_and_regions <- c("ATG","BHS","BLZ","BRB","DMA","GRD","GUY","HTI","JAM","
 
 # Import WDI Data
 library(wbstats)
-series <- c("ST.INT.ARVL",
+series <- c("GC.DOD.TOTL.GD.ZS",
+            "ST.INT.ARVL",
             "GC.REV.XGRT.GD.ZS",
+            "GC.TAX.TOTL.GD.ZS",
             "GC.XPN.TOTL.GD.ZS",
             "BN.CAB.XOKA.GD.ZS",
             "SI.POV.NAHC",
             "SI.POV.DDAY",
+            "SI.POV.GINI",
             "FP.CPI.TOTL.ZG",
             "SL.UEM.TOTL.NE.ZS",
             "SL.UEM.TOTL.ZS",
             "FM.AST.NFRG.CN",
             "FD.RES.LIQU.AS.ZS",
+            "FB.BNK.CAPA.ZS",
+            "FB.AST.NPER.ZS",
+            "FS.AST.DOMS.GD.ZS",
             "BN.RES.INCL.CD",
             "FI.RES.TOTL.MO")
 
@@ -61,12 +67,12 @@ by_region <- group_by(caricom_data, region)
 
 # Export Data Set ---------------------------------------------------------
 # Caricom Data
-write.csv(caricom_data, "caricom_data.csv")
-saveRDS(caricom_data, "caricom_data.Rds")
+write.csv(caricom_data, "1. Data/caricom_data.csv")
+saveRDS(caricom_data, "1. Data/caricom_data.Rds")
 
 # Caricom and Region Data
-write.csv(caricom_and_regions_data, "caricom_and_regions_data.csv")
-saveRDS(caricom_and_regions_data, "caricom_and_regions_data.Rds")
+write.csv(caricom_and_regions_data, "1. Data/caricom_and_regions_data.csv")
+saveRDS(caricom_and_regions_data, "1. Data/caricom_and_regions_data.Rds")
 
 # Remove Objects no longer required from the Environment --------------------
 rm("series", "wb_countries")
